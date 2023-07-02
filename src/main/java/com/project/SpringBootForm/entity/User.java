@@ -1,8 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.project.SpringBootForm.entity;
+
+import java.util.Date;
 
 /**
  *
@@ -10,81 +9,84 @@ package com.project.SpringBootForm.entity;
  */
 public class User {
     
-    private String firstName;
-    private String lastName;
-    private String gender;
-    private String telephoneNumber;
-    private String email;
-    private String address;
-    private String seminar;
-    
-    // --------------------------- override toString() -----------------------------
+    private String name;
+	private String email;
+	private String password;
+	private String gender;
+	private String note;
+	private boolean married;
+	private Date birthday;
+	private String profession;
 
-    @Override
-    public String toString() {
-        return "User{" + "firstName= " + firstName + ", lastName = " + lastName + 
-                ", gender = " + gender + ", telephoneNumber = " + telephoneNumber + 
-                ", email = " + email + ", address = " + address + ", seminar = " + seminar + '}';
-    }
-    
-    
-    // --------------------------- getters and setters -----------------------------
+	public String getName() {
+		return name;
+	}
 
-    public String getFirstName() {
-        return firstName;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public String getLastName() {
-        return lastName;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+	public String getPassword() {
+		return password;
+	}
 
-    public String getGender() {
-        return gender;
-    }
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
+	public String getGender() {
+		return gender;
+	}
 
-    public String getTelephoneNumber() {
-        return telephoneNumber;
-    }
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 
-    public void setTelephoneNumber(String telephoneNumber) {
-        this.telephoneNumber = telephoneNumber;
-    }
+	public String getNote() {
+		return note;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public void setNote(String note) {
+		this.note = note;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public boolean isMarried() {
+		return married;
+	}
 
-    public String getAddress() {
-        return address;
-    }
+	public void setMarried(boolean married) {
+		this.married = married;
+	}
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
+	public Date getBirthday() {
+		return birthday;
+	}
 
-    public String getSeminar() {
-        return seminar;
-    }
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
 
-    public void setSeminar(String seminar) {
-        this.seminar = seminar;
-    }
-    
+	public String getProfession() {
+		return profession;
+	}
+
+	public void setProfession(String profession) {
+		this.profession = profession;
+	}
+
+	@Override
+	public String toString() {
+		return "User [name=" + name + ", email=" + email + ", password=" + password + ", gender=" + gender + ", note="
+				+ note + ", married=" + married + ", birthday=" + birthday + ", profession=" + profession + "]";
+	}
+
     
 }

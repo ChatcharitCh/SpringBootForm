@@ -6,10 +6,12 @@ import java.util.Arrays;
 import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class UserController {
     
+    @GetMapping("/register")
     public String showForm(Model model) {
         User user = new User();
         model.addAttribute("user", user);

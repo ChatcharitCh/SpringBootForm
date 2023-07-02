@@ -24,6 +24,10 @@ public class UserController {
         return "register_form";
     }
 
-    
+    @PostMapping("/register")
+    public String submitForm(@ModelAttribute("user") User user) {
+        System.out.println(user);
+        return "register_success";
+    }
 
 }

@@ -15,8 +15,21 @@ input[type=radio] {
 input[type=checkbox] {
     margin-right: 190px;
 }
-button {
-    padding: 5px;
-    margin: 10px;
+
+
+.register-button {
+  margin: 20px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.register-button:hover {
+  background-color: #45a049;
 }
 

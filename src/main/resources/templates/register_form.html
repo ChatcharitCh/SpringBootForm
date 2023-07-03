@@ -9,37 +9,33 @@
 <div align="center">
     <h1>User Registration</h1>
     <form action="#" th:action="@{/register}" method="post" th:object="${user}">
-        <label>First Name :</label>
-        <input type="text" th:field="*{name}" /><br/>
+        <label class="form-label">First Name :</label>
+        <input class="form-input" type="text" th:field="*{firstName}" /><br/>
  
-        <label>Last Name :</label>
-        <input type="text" th:field="*{email}" /><br/>
+        <label class="form-label">Last Name :</label>
+        <input class="form-input" type="text" th:field="*{lastName}" /><br/>
  
-        <label>Telephone Number :</label>
-        <input type="text" th:field="*{password}" /><br/>
+        <label class="form-label">Telephone Number :</label>
+        <input class="form-input" type="text" th:field="*{telephoneNumber}" /><br/>
  
-        <label>E-mail :</label>
-        <input type="text" th:field="*{birthday}" /><br/>
- 
-        <label>Gender :</label>
-        <input type="radio" th:field="*{gender}" value="Male" />Male
-        <input type="radio" th:field="*{gender}" value="Female" />Female<br/>
+        <label class="form-label">E-mail :</label>
+        <input class="form-input" type="text" th:field="*{email}" /><br/>
         
-        <label>Address :</label>
-        <textarea rows="10" cols="25" th:field="*{note}"></textarea>
+ 
+        <label class="form-label">Gender :</label>
+        <input class="form-radio" type="radio" th:field="*{gender}" value="Male" />Male
+        <input class="form-radio" type="radio" th:field="*{gender}" value="Female" />Female<br/>
+        
+        <label class="form-label">Address :</label>
+        <textarea class="form-textarea" rows="10" cols="25" th:field="*{address}"></textarea>
         <br/>
  
-        <label>Profession :</label>
-        <select th:field="*{profession}">
-            <option th:each="p : ${testList}" th:value="${p}" th:text="${p}" />
+        <label class="form-label">Course :</label>
+        <select class="form-select" th:field="*{course}">
+            <option th:each="p : ${course}" th:value="${p}" th:text="${p}" />
         </select>
         <br/>
- 
-        <label>Married?</label>
-        <input type="checkbox" th:field="*{married}" /><br/>
- 
-        
- 
+
         <button type="submit" class="register-button">Register</button>    
     </form>
 </div>

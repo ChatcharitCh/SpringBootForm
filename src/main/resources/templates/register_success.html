@@ -1,15 +1,49 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="ISO-8859-1">
+        <title>Registration Success</title>
+        <style type="text/css">
+            span {
+                display: inline-block;
+                width: 300px;
+                text-align: left;
+                font-size: 20px;
+                margin-top: 10px;
+            }
+            .h1{
+                color: green;
+            }
+            .registration-successful {
+                text-align: center;
+                margin-top: 50px;
+            }
+
+            .registration-successful h3 {
+                font-size: 24px;
+                color: #333;
+            }
+
+            .registration-successful p {
+                font-size: 16px;
+                color: #666;
+            }
+        </style>
     </head>
     <body>
-        <div>TODO write content</div>
+        <div align="center">
+            <h1 color="green">Registration Succeeded!</h1>
+            <span>Course :</span><span th:text="${user.course}"></span><br/>
+            <span>First Name :</span><span th:text="${user.firstName}"></span><br/>
+            <span>Last Name :</span><span th:text="${user.lastName}"></span><br/>
+            <span>Telephone Number :</span><span th:text="${user.telephoneNumber}"></span><br/>
+            <span>E-mail :</span><span th:text="${user.email}"></span><br/>
+            <span>Gender :</span><span th:text="${user.gender}"></span><br/>
+            <span>Address : </span><span th:text="${user.address}"></span><br/>
+
+            <div class="registration-successful">
+                <p>We will send the course-related information to you via email.</p>
+            </div>
+        </div>
     </body>
 </html>

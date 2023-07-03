@@ -18,8 +18,10 @@ public class UserController {
         model.addAttribute("user", user);
 
         // Drop down
-        List<String> testList = Arrays.asList("test1", "test2", "test3");
-        model.addAttribute("testList", testList);
+        List<String> course = Arrays.asList("Java Beginner to Master", "Basic Java Programming", 
+                                            "Java Spring Boot Advance", "Full Stack Java Developer",
+                                                "Spring Framework Zero to Hero");
+        model.addAttribute("course", course);
 
         return "register_form";
     }

@@ -1,43 +1,95 @@
+
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-<meta charset="ISO-8859-1">
-<title>User Registration</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div align="center">
-    <h1>User Registration</h1>
-    <form action="#" th:action="@{/register}" method="post" th:object="${user}">
-        <label class="form-label">First Name :</label>
-        <input class="form-input" type="text" th:field="*{firstName}" /><br/>
- 
-        <label class="form-label">Last Name :</label>
-        <input class="form-input" type="text" th:field="*{lastName}" /><br/>
- 
-        <label class="form-label">Telephone Number :</label>
-        <input class="form-input" type="text" th:field="*{telephoneNumber}" /><br/>
- 
-        <label class="form-label">E-mail :</label>
-        <input class="form-input" type="text" th:field="*{email}" /><br/>
-        
- 
-        <label class="form-label">Gender :</label>
-        <input class="form-radio" type="radio" th:field="*{gender}" value="Male" />Male
-        <input class="form-radio" type="radio" th:field="*{gender}" value="Female" />Female<br/>
-        
-        <label class="form-label">Address :</label>
-        <textarea class="form-textarea" rows="10" cols="25" th:field="*{address}"></textarea>
-        <br/>
- 
-        <label class="form-label">Course :</label>
-        <select class="form-select" th:field="*{course}">
-            <option th:each="p : ${course}" th:value="${p}" th:text="${p}" />
-        </select>
-        <br/>
 
-        <button type="submit" class="register-button">Register</button>    
-    </form>
-</div>
-</body>
+    <head>
+        <title>SmartLearn</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+              rel="stylesheet" 
+              integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+              crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark me-auto">
+            <div class="container">
+                <a class="navbar-brand" href="/">SmartLearn</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">My Learning</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex ms-auto">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="container mt-4">
+            <h1 class="text-center">Sign up</h1><br>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form action="#" th:action="@{/register}" method="post" th:object="${user}">
+                        <div class="mb-3">
+                            <label class="form-label">First Name:</label>
+                            <input class="form-control" type="text" th:field="*{firstName}">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Last Name:</label>
+                            <input class="form-control" type="text" th:field="*{lastName}">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Telephone Number:</label>
+                            <input class="form-control" type="text" th:field="*{telephoneNumber}">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">E-mail:</label>
+                            <input class="form-control" type="text" th:field="*{email}">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Address:</label>
+                            <textarea class="form-control" rows="1" th:field="*{address}"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Course:</label>
+                            <select class="form-select" th:field="*{course}">
+                                <option th:each="p : ${course}" th:value="${p}" th:text="${p}"></option>
+                            </select>
+                        </div>
+                        <br>
+                        
+                        <br>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-success">Register</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer class="ms-right" align="center">
+            <p>&copy; 2023 SmartLearn. All rights reserved.</p>
+        </footer>
+    </body>
+
 </html>

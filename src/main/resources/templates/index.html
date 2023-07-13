@@ -1,15 +1,75 @@
 <!DOCTYPE html>
-
 <html>
     <head>
-        <title>Spring Boot Form Demo</title>
+        <title>SmartLearn</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+              rel="stylesheet" 
+              integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+              crossorigin="anonymous">
     </head>
     <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark me-auto" >
+            <div class="container">
+                <a class="navbar-brand" href="/">SmartLearn</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/register">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">My Learning</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex ms-auto">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+
+                </div>
+            </div>
+        </nav>
+
+        <br>
         <div align="center">
-            <h1>Spring Boot Form Demo</h1>
-            <a href="/register">Click here to register</a>
+            <section>
+                <div align="center">
+                    <h2>Welcome To Our Website!</h2><br>
+                    <h2 align="center">Online Courses Learn Anything</h2><br>
+                    <p class="text-box">"Java Beginner to Master": Comprehensive course for beginners to master Java programming from basics to advanced levels.</p>
+                    <p class="text-box">"Basic Java Programming": Fundamentals of Java programming, covering variables, control statements, and basic object-oriented concepts.</p>
+                    <p class="text-box">"Java Spring Boot Advance": Develop applications using Java Spring Boot framework, focusing on RESTful APIs, database integration, and security.</p>
+                    <p class="text-box">"Full Stack Java Developer": Gain skills in both backend and frontend development using Java, including database, API, and web interface creation.</p>
+                    <p class="text-box">"Spring Framework Zero to Hero": Learn the Spring Framework for Java applications, covering dependency injection, MVC web development, and testing.</p><br>
+                    
+                    
+                </div>
+            </section>
+            <header>
+                <h1></h1>
+                <br>
+            </header>
+
+            <footer class="ms-right">
+                <p>&copy; 2023 SmartLearn. All rights reserved.</p>
+            </footer>
         </div>
     </body>
+
 </html>
+

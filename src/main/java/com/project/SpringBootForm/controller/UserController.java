@@ -31,5 +31,5 @@ public class UserController {
         System.out.println(user);
         return "register_success";
     }
-
+   
 }
